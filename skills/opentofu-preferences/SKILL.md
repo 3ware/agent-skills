@@ -65,6 +65,7 @@ Separate sections in any `.tf` file with this banner (120 characters wide, sente
 
 - `lifecycle { enabled }` exists only in OpenTofu 1.11+ and fails under Terraform. It cannot be combined with `count`/`for_each`, and its value must be a known, non-sensitive, non-null boolean at plan time.
 - Registry module `version` cannot take a commit hash. To pin a community module by commit, use a `git::` source with `?ref=<sha>` (see [references/project-structure.md](references/project-structure.md)).
+- Registry lookups (MCP server or registry website) return release tags, not commits. Resolve the tag with `git ls-remote https://github.com/<org>/<repo> 'refs/tags/<tag>*'`; if a `^{}` line appears, pin that SHA instead.
 - Use the `tofu` CLI, not `terraform`.
 
 ## Validate before finishing
