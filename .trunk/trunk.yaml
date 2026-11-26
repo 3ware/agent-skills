@@ -9,3 +9,24 @@ plugins:
     - id: 3ware
       ref: v1.2.1
       uri: https://github.com/3ware/trunk-code-quality-plugins
+lint:
+  files:
+    - name: skill-md
+      filenames: [SKILL.md]
+  definitions:
+    - name: skills-ref
+      files: [skill-md]
+      description: Validate Agent Skills frontmatter against the agentskills.io spec
+      environment:
+        - name: PATH
+          list: ["${env.PATH}"]
+      commands:
+        - name: validate
+          output: pass_fail
+          target: ${parent}
+          # Installed by the uv postinstall hook in mise.toml
+          run: skills-ref validate ${target}
+          read_output_from: stderr
+          success_codes: [0, 1]
+  enabled:
+    - skills-ref

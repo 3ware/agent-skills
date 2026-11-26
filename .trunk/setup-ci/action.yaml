@@ -1,0 +1,7 @@
+name: Trunk setup CI
+description: Install tools from mise.toml for custom Trunk linters
+
+runs:
+  using: composite
+  steps:
+    - uses: jdx/mise-action@v5.3.0
