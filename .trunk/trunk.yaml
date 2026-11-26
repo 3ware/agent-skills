@@ -1,0 +1,11 @@
+version: 0.1
+cli:
+  version: 1.25.0
+plugins:
+  sources:
+    - id: trunk
+      ref: v1.11.0
+      uri: https://github.com/trunk-io/plugins
+    - id: 3ware
+      ref: v1.2.1
+      uri: https://github.com/3ware/trunk-code-quality-plugins
