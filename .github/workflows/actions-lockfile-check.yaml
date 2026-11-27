@@ -30,8 +30,7 @@ jobs:
         with:
           persist-credentials: false
       - run: gh extension install github/gh-actions-lock --pin "$(<.github/gh-actions-lock.version)"
-      # TODO: [#3] Remove --ignore-local-actions once trunk-action references setup-ci as $/
-      - run: gh actions-lock --verify --ignore-local-actions
+      - run: gh actions-lock --verify
 
   update:
     needs: verify
@@ -50,8 +49,7 @@ jobs:
         with:
           persist-credentials: false
       - run: gh extension install github/gh-actions-lock --pin "$(<.github/gh-actions-lock.version)"
-      # TODO: [#3] Remove --ignore-local-actions once trunk-action references setup-ci as $/
-      - run: gh actions-lock --ignore-local-actions
+      - run: gh actions-lock
 
       # Workflow triggered by GITHUB_TOKEN require manual approval
       # Use threeware-bot application token for lockfile commits
