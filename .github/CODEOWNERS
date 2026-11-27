@@ -6,3 +6,4 @@
 /.github/renovate.json @3ware/repo-maintainers
 /.vscode/** @3ware/repo-maintainers
 /CHANGELOG.md @3ware/repo-maintainers
+/skills/** @3ware/repo-maintainers

@@ -1,0 +1,3 @@
+[tools]
+# skills-ref is installed once here; running uvx under the trunk daemon hangs
+uv = { version = "0.13.10", postinstall = "uv tool install --force 'git+https://github.com/agentskills/agentskills@f130f348f502d9804278a617f86929846896d2e9#subdirectory=skills-ref'" }

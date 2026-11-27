@@ -15,6 +15,11 @@ jobs:
       contents: read
       pull-requests: write # Required by reusable workflow for PR comments
     uses: 3ware/workflows/.github/workflows/reusable-validate-pr-title.yaml@v6.0.0
+    with:
+      scopes: |
+        actions
+        opentofu
+        release
     secrets:
       github-app-id: ${{ secrets.THREEWARE_RELEASE_APPLICATION_ID }}
       github-app-private-key: ${{ secrets.THREEWARE_RELEASE_APPLICATION_PRIVATE_KEY }}

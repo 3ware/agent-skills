@@ -3,5 +3,14 @@
   "version": "0.2",
   "language": "en-GB",
   "suggestionsTimeout": 5000,
-  "words": ["chazypro", "pullrequest", "threeware"]
+  "words": [
+    "agentskills",
+    "antonbabenko",
+    "chazypro",
+    "frontmatter",
+    "gotchas",
+    "linters",
+    "pullrequest",
+    "threeware"
+  ]
 }

@@ -13,7 +13,9 @@ jobs:
     name: Trunk Code Quality
     permissions:
       contents: read
-    uses: 3ware/workflows/.github/workflows/reusable-trunk-code-quality.yaml@v6.0.0
+    uses: 3ware/workflows/.github/workflows/reusable-trunk-code-quality.yaml@v6.1.0
+    with:
+      trunk-arguments: --exclude=skills-ref
     secrets:
       github-app-id: ${{ secrets.THREEWARE_RELEASE_APPLICATION_ID }}
       github-app-private-key: ${{ secrets.THREEWARE_RELEASE_APPLICATION_PRIVATE_KEY }}

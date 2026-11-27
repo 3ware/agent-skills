@@ -71,4 +71,4 @@ jobs:
           repo: ${{ github.repository }}
           branch: ${{ github.head_ref }}
           file_pattern: .github/workflows/actions.lock
-          commit_message: "ci(github-actions): Update lockfile"
+          commit_message: update actions lockfile
