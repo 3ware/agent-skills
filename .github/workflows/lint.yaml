@@ -9,11 +9,21 @@ on:
 permissions: {}
 
 jobs:
+  # TODO [#3] Remove this job once trunk-action references setup-ci as $/.trunk/setup-ci
+  lock-setup-ci:
+    name: Lock setup-ci dependencies
+    # trunk-ignore(actionlint/if-cond)
+    if: false
+    runs-on: ubuntu-slim
+    steps:
+      - name: Lock setup-ci dependencies
+        uses: $/.trunk/setup-ci
+
   trunk:
     name: Trunk Code Quality
     permissions:
       contents: read
-    uses: 3ware/workflows/.github/workflows/reusable-trunk-code-quality.yaml@v6.0.0
+    uses: 3ware/workflows/.github/workflows/reusable-trunk-code-quality.yaml@fix/trunk-setup-ci
     secrets:
       github-app-id: ${{ secrets.THREEWARE_RELEASE_APPLICATION_ID }}
       github-app-private-key: ${{ secrets.THREEWARE_RELEASE_APPLICATION_PRIVATE_KEY }}
