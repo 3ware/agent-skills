@@ -13,7 +13,7 @@ jobs:
     name: Trunk Code Quality
     permissions:
       contents: read
-    uses: 3ware/workflows/.github/workflows/reusable-trunk-code-quality.yaml@feat/add-trunk-arguments
+    uses: 3ware/workflows/.github/workflows/reusable-trunk-code-quality.yaml@v6.1.0
     with:
       trunk-arguments: --exclude=skills-ref
     secrets:
