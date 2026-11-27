@@ -25,6 +25,12 @@ jobs:
         with:
           persist-credentials: false
 
+      # TODO [#3] Remove this step once trunk-action references setup-ci as $/.trunk/setup-ci
+      - name: Lock setup-ci dependencies
+        # trunk-ignore(actionlint/if-cond)
+        if: false
+        uses: $/.trunk/setup-ci
+
       # Use threeware-bot application token for trunk. This ensure workflows can
       # run on pull requests that trunk creates.
       - name: Get GitHub App token
