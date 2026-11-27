@@ -1,8 +1,8 @@
 # Agent Skills
 
-[Agent Skills](https://agentskills.io) encoding 3ware conventions, loadable by any skills-compatible agent.
-
 [![GitHub release](https://img.shields.io/github/release/3ware/agent-skills?include_prereleases=&sort=semver&color=green)](https://github.com/3ware/agent-skills/releases/) [![issues - workflows](https://img.shields.io/github/issues/3ware/agent-skills)](https://github.com/3ware/agent-skills/issues) [![CI](https://img.shields.io/github/actions/workflow/status/3ware/agent-skills/pr-check.yaml?label=CI&logo=githubactions&logoColor=white)](https://github.com/3ware/agent-skills/actions/workflows/pr-check.yaml)
+
+[Agent Skills](https://agentskills.io) encoding 3ware conventions, loadable by any skills-compatible agent.
 
 | Skill                                                           | Purpose                                                                       |
 | --------------------------------------------------------------- | ----------------------------------------------------------------------------- |
